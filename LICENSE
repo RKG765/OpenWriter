@@ -1,42 +1,54 @@
-# OpenWriter License
+OpenWriter License
+==================
 
-**Copyright (c) 2024 RKG765**
+Copyright (c) 2024 RKG765
 
-## Terms and Conditions
+Terms and Conditions
+--------------------
 
-### ✅ You ARE permitted to:
+YOU ARE PERMITTED TO:
 
-1. **Use** - Use this software for personal, educational, or non-commercial purposes
-2. **Modify** - Modify the source code for personal use
-3. **Share** - Share the original or modified versions for non-commercial purposes
-4. **Learn** - Study the code and use it as a learning resource
-5. **Contribute** - Submit contributions back to this project
+  1. Use - Use this software for personal, educational, or non-commercial purposes
+  2. Modify - Modify the source code for personal use
+  3. Share - Share the original or modified versions for non-commercial purposes
+  4. Learn - Study the code and use it as a learning resource
+  5. Contribute - Submit contributions back to this project
 
-### ⚠️ You MUST:
+YOU MUST:
 
-1. **Give Credit** - Provide appropriate attribution to the original author (RKG765) in any distribution or derivative work
-2. **Include License** - Include a copy of this license in any distribution
-3. **State Changes** - Clearly indicate if changes were made to the original code
+  1. Give Credit - Provide appropriate attribution to the original author (RKG765)
+     in any distribution or derivative work
+  2. Include License - Include a copy of this license in any distribution
+  3. State Changes - Clearly indicate if changes were made to the original code
 
-### ❌ You are NOT permitted to:
+YOU ARE NOT PERMITTED TO:
 
-1. **Commercial Use** - Use this software for commercial purposes without explicit written permission from the author
-2. **Sell** - Sell this software or any derivative works without explicit written permission from the author
-3. **Sublicense** - Grant rights to others that exceed the rights granted by this license
-4. **Remove Attribution** - Remove or alter any copyright notices or attribution
+  1. Commercial Use - Use this software for commercial purposes without explicit
+     written permission from the author
+  2. Sell - Sell this software or any derivative works without explicit written
+     permission from the author
+  3. Sublicense - Grant rights to others that exceed the rights granted by this license
+  4. Remove Attribution - Remove or alter any copyright notices or attribution
 
-## Commercial Licensing
+Commercial Licensing
+--------------------
 
-For commercial use, business applications, or selling/redistributing this software, please contact the author:
+For commercial use, business applications, or selling/redistributing this
+software, please contact the author:
 
-- **GitHub:** [@RKG765](https://github.com/RKG765)
-- **Email:** [Contact via GitHub]
+  GitHub: https://github.com/RKG765
+  Email:  rajkumargupta7632@gmail.com
 
-## Disclaimer
+Disclaimer
+----------
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
 ---
-
-**License Type:** Custom Non-Commercial License with Attribution  
-**SPDX Identifier:** LicenseRef-OpenWriter-NC
+License Type: Custom Non-Commercial License with Attribution
