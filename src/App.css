@@ -1,0 +1,591 @@
+/* System theme detection */
+:root {
+  --bg-primary: #f3f3f3;
+  --bg-secondary: #ffffff;
+  --bg-toolbar: #f9f9f9;
+  --bg-ribbon: #f3f3f3;
+  --text-primary: #1a1a1a;
+  --text-secondary: #545454;
+  --border-color: #d1d1d1;
+  --accent-color: #0078d4;
+  --hover-bg: #e5e5e5;
+  --active-bg: #d0d0d0;
+  --status-bar-bg: #0078d4;
+  --status-bar-text: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #1e1e1e;
+    --bg-secondary: #252526;
+    --bg-toolbar: #2d2d2d;
+    --bg-ribbon: #333333;
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+    --border-color: #3d3d3d;
+    --accent-color: #0078d4;
+    --hover-bg: #3d3d3d;
+    --active-bg: #4d4d4d;
+    --status-bar-bg: #007acc;
+    --status-bar-text: #ffffff;
+  }
+}
+
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+/* App Layout */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Title Bar */
+.title-bar {
+  display: flex;
+  align-items: center;
+  padding: 2px 8px;
+  background-color: var(--bg-toolbar);
+  border-bottom: 1px solid var(--border-color);
+  gap: 8px;
+  flex-shrink: 0;
+  height: 28px;
+}
+
+.title-bar-icon {
+  width: 18px;
+  height: 18px;
+  background: linear-gradient(135deg, #2b579a 0%, #1e4174 100%);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.title-bar-actions {
+  display: flex;
+  gap: 2px;
+}
+
+.title-bar-btn {
+  padding: 2px 6px;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.title-bar-btn:hover {
+  background-color: var(--hover-bg);
+}
+
+.title-bar-title {
+  flex: 1;
+  text-align: center;
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+/* Ribbon Tabs */
+.ribbon-tabs {
+  display: flex;
+  background-color: var(--bg-toolbar);
+  border-bottom: 1px solid var(--border-color);
+  padding: 0 4px;
+}
+
+.ribbon-tab {
+  padding: 6px 14px;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-size: 12px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+
+.ribbon-tab:hover {
+  background-color: var(--hover-bg);
+}
+
+.ribbon-tab.active {
+  border-bottom-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+/* Ribbon Toolbar */
+.ribbon-toolbar {
+  display: flex;
+  padding: 4px 8px;
+  background-color: var(--bg-ribbon);
+  border-bottom: 1px solid var(--border-color);
+  gap: 8px;
+  flex-shrink: 0;
+  overflow-x: auto;
+  min-height: 80px;
+}
+
+.ribbon-group {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--border-color);
+  padding-right: 8px;
+}
+
+.ribbon-group:last-child {
+  border-right: none;
+}
+
+.ribbon-group-wide {
+  min-width: 120px;
+}
+
+.ribbon-group-content {
+  display: flex;
+  gap: 2px;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.ribbon-group-label {
+  font-size: 9px;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-top: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Ribbon Buttons */
+.ribbon-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 6px;
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-primary);
+  font-size: 10px;
+  cursor: pointer;
+  border-radius: 3px;
+  min-width: 40px;
+  gap: 2px;
+}
+
+.ribbon-btn:hover {
+  background-color: var(--hover-bg);
+  border-color: var(--border-color);
+}
+
+.ribbon-btn:active {
+  background-color: var(--active-bg);
+}
+
+.ribbon-btn-icon {
+  font-size: 16px;
+}
+
+.ribbon-btn-large {
+  min-width: 50px;
+  padding: 6px 8px;
+}
+
+.ribbon-btn-large .ribbon-btn-icon {
+  font-size: 24px;
+}
+
+.ribbon-btn-small {
+  flex-direction: row;
+  padding: 2px 6px;
+  min-width: auto;
+  gap: 4px;
+  font-size: 10px;
+}
+
+.ribbon-btn-small .ribbon-btn-icon {
+  font-size: 12px;
+}
+
+.ribbon-btn-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.ribbon-btn-icon-only {
+  min-width: 26px;
+  width: 26px;
+  height: 24px;
+  padding: 2px;
+  font-size: 12px;
+}
+
+.ribbon-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Font Group Layout */
+.ribbon-font-group,
+.ribbon-para-group {
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ribbon-font-row {
+  display: flex;
+  gap: 1px;
+}
+
+/* Styles Gallery */
+.ribbon-styles-gallery {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.ribbon-style-btn {
+  padding: 4px 8px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 2px;
+  font-size: 10px;
+  cursor: pointer;
+  min-width: 60px;
+  text-align: center;
+}
+
+.ribbon-style-btn:hover {
+  border-color: var(--accent-color);
+}
+
+.ribbon-style-h1 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #2b579a;
+}
+
+.ribbon-style-h2 {
+  font-size: 12px;
+  font-weight: bold;
+  color: #2b579a;
+}
+
+.ribbon-style-h3 {
+  font-size: 11px;
+  font-weight: bold;
+}
+
+/* Toolbar Error & Loading */
+.toolbar-error {
+  padding: 6px 12px;
+  background-color: #d32f2f;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toolbar-loading {
+  padding: 4px 12px;
+  font-size: 11px;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Main Content Area */
+.main-content {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  background-color: #525252;
+}
+
+/* Editor container - visible, editable, Word-like page */
+.editor-hidden {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 20px 40px;
+  background-color: #525252;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Paged view wrapper - HIDDEN until view mode toggle added */
+.paged-view-wrapper {
+  display: none;
+}
+
+/* Paged view - contains all page containers */
+.paged-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 20px 40px;
+}
+
+/* Individual page container */
+.page-container {
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  flex-shrink: 0;
+  position: relative;
+}
+
+/* Page body - content area */
+.page-body {
+  font-family: 'Calibri', Arial, sans-serif;
+  font-size: 11pt;
+  line-height: 1.15;
+  color: #000000;
+}
+
+.page-body p {
+  margin: 0 0 8pt 0;
+}
+
+.page-body h1 {
+  font-size: 16pt;
+  font-weight: bold;
+  margin: 12pt 0 6pt 0;
+  color: #2e74b5;
+}
+
+.page-body h2 {
+  font-size: 13pt;
+  font-weight: bold;
+  margin: 10pt 0 4pt 0;
+  color: #2e74b5;
+}
+
+.page-body h3 {
+  font-size: 12pt;
+  font-weight: bold;
+  margin: 8pt 0 4pt 0;
+  color: #1f4d78;
+}
+
+/* Page footer with page number */
+.page-footer {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10pt;
+  color: #666;
+}
+
+/* ============ DOCUMENT CANVAS (for Editor styling) ============ */
+
+/* Scrollable canvas with gray background */
+.document-canvas {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 20px 40px;
+  background-color: #525252;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* The page - centered white area with shadow */
+.page {
+  width: 816px;
+  min-height: 1056px;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  flex-shrink: 0;
+}
+
+/* CKEditor inside page */
+.page .ck.ck-editor {
+  border: none !important;
+}
+
+.page .ck.ck-editor__top {
+  display: none !important;
+}
+
+.page .ck.ck-editor__main {
+  min-height: 1000px;
+}
+
+/* The editable area - 1 inch margins, Word typography */
+.page .ck.ck-editor__editable {
+  min-height: 1000px;
+  padding: 96px !important;
+  /* 1 inch = 96px at 96 DPI */
+  font-family: 'Calibri', Arial, sans-serif;
+  font-size: 11pt;
+  line-height: 1.15;
+  color: #000000;
+  background: #ffffff;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.page .ck.ck-editor__editable:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Paragraph spacing (Word default: 8pt after) */
+.page .ck-content p {
+  margin: 0 0 8pt 0;
+  line-height: 1.15;
+}
+
+/* Heading styles - larger, bolder, more spacing */
+.page .ck-content h1 {
+  font-size: 16pt;
+  font-weight: bold;
+  margin: 12pt 0 6pt 0;
+  line-height: 1.15;
+  color: #2e74b5;
+}
+
+.page .ck-content h2 {
+  font-size: 13pt;
+  font-weight: bold;
+  margin: 10pt 0 4pt 0;
+  line-height: 1.15;
+  color: #2e74b5;
+}
+
+.page .ck-content h3 {
+  font-size: 12pt;
+  font-weight: bold;
+  margin: 8pt 0 4pt 0;
+  line-height: 1.15;
+  color: #1f4d78;
+}
+
+/* Lists */
+.page .ck-content ul,
+.page .ck-content ol {
+  margin: 0 0 8pt 0;
+  padding-left: 36pt;
+}
+
+.page .ck-content li {
+  margin: 0 0 2pt 0;
+}
+
+/* Tables */
+.page .ck-content table {
+  margin: 8pt 0;
+  border-collapse: collapse;
+}
+
+.page .ck-content td,
+.page .ck-content th {
+  border: 1px solid #000;
+  padding: 5pt 10pt;
+}
+
+/* Block quote */
+.page .ck-content blockquote {
+  border-left: 3px solid #ccc;
+  margin: 8pt 0;
+  padding-left: 12pt;
+  color: #666;
+}
+
+/* Page break indicator */
+.page .ck-content .page-break {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20pt 0;
+  padding: 10pt 0;
+  border-top: 1px dashed #999;
+  border-bottom: 1px dashed #999;
+  background: #f5f5f5;
+}
+
+/* Hide CKEditor "Powered by" branding */
+.ck.ck-powered-by,
+.ck-powered-by-balloon,
+.ck.ck-balloon-panel.ck-powered-by-balloon,
+[class*="ck-powered-by"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Status Bar */
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 12px;
+  background-color: var(--status-bar-bg);
+  color: var(--status-bar-text);
+  font-size: 10px;
+  flex-shrink: 0;
+  height: 20px;
+}
+
+.status-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.file-path {
+  opacity: 0.9;
+}
+
+.dirty-indicator {
+  color: #ffd700;
+  font-weight: 500;
+}
+
+.status-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.connection-status {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
