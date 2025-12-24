@@ -3,7 +3,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/version-0.1.0-blue.svg" alt="Version">
   <img src="https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg" alt="Platform">
-  <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License">
+  <img src="https://img.shields.io/badge/license-Non--Commercial-orange.svg" alt="License">
   <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome">
 </p>
 
@@ -407,7 +407,13 @@ We welcome contributions from everyone! Here's how you can help:
 
 ## 📄 License
 
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+This project is licensed under a **Custom Non-Commercial License** - see the [LICENSE](LICENSE) file for details.
+
+**In summary:**
+- ✅ Free for personal & educational use
+- ✅ Contributions welcome
+- ⚠️ Attribution required
+- ❌ Commercial use requires permission from [@RKG765](https://github.com/RKG765)
 
 ---
 
